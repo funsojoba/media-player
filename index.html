@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Media Player</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-audio">
+            <div class="container-audio-file">
+                <div class="image">
+                    <img src="./folder.jpg" alt="Morning Dew" loading="lazy">
+                    <!-- <audio src="https://estoremessage.s3.amazonaws.com/mdewworship/According+to+Your+Mercy+-+GLT+Music.mp3" id="audio"></audio> -->
+<!--BACK UP-->
+                    <audio src="./audio.mp3" id="audio"></audio>
+                </div>
+                <div class="control">
+                    <div class="icons">
+                        <div class="prev">
+                            <i class="fas fa-backward" onclick="app.fastBackward()"></i>                       
+                         </div>
+
+                        <div class="play">
+                            <i class="fas fa-play play-btn" onclick="app.toggle(this)"></i>
+                        </div>
+
+                        <div class="next">
+                            <i class="fas fa-forward" onclick="app.fastForward()"></i>              
+                        </div>
+                    </div>
+                    <div class="tracker">
+
+                        <input class="range" type="range" value="0" min="0" max="100">
+                        
+                        <!-- <div class="tracker-width">
+
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-text">
+
+            <h2>New Song Release</h2>
+            <h5>according to your mercy</h5>
+            <small>by <strong>Pastor Segun Obadje</strong> </small> <br>
+            <a href="#" class="btn">DOWNLOAD &nbsp; <i class="fas fa-download"></i></a>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

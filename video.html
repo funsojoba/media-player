@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="video">
+        <div class="video-content">
+            <div class="video-content-file">
+                <video src="./video.mp4" id="video"></video>
+
+                <div class="video-content-file-controls">
+                    <div class="name">
+                        <p class="name">Video Name</p>
+                    </div>
+                    <div class="play">
+                        <i class="fas fa-backward fa-2x" onclick="app.fastBackward()"></i>
+                        <i class="fas fa-play play-btn fa-4x" onclick="app.toggle(this)"></i>
+                        <i class="fas fa-forward fa-2x" onclick="app.fastForward()"></i> 
+                    </div>
+
+                    <div class="playback">
+                        <input type="range" name="range" class="range" id="range" min="0" max="100" value="0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./video.js"></script>
+</body>
+</html>
