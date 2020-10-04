@@ -83,8 +83,6 @@ const app = {
         startBtn.style.display = "block";
         stopBtn.style.display = "none";
     }
-
-
 }
 
 startBtn.addEventListener("click", (e)=>{
