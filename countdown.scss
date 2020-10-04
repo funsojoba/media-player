@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+$deepblue : #161032;
+$lightdeepblue : #221B42;
+$blue : #4DCCBD;
+$yellow: #FAFF81;
+
+.body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: $deepblue;
+    position: relative;
+    overflow: hidden;
+
+    .counter{
+        display: flex;
+
+        @media only screen and (max-width:850px){
+            flex-direction: column;
+        }
+
+        &>div{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: $lightdeepblue;
+            margin: 10px;
+
+            h1{
+                font-size: 3.5rem;
+                color: $yellow;
+            }
+            small{
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+.add{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    color: #FAFF81;
+    
+}
+.pause-stop{
+    color: $yellow;
+    position: absolute;
+    right: 24px;
+    bottom: 40px;
+    display: none;
+    flex-direction: column;
+    height: 200px;
+    cursor: pointer;
+
+    &>i{
+        margin: 20px;
+    }
+}
+
+i{
+    cursor: pointer;
+    transition: all 200ms ease;
+    
+    &:hover{
+        transform: scale(1.12);
+    }
+    
+    &:active{
+        transform: rotate(20deg);
+    }
+}
+
+#form{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100vh;
+    background: $lightdeepblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateX(100%);
+    box-shadow: 1px 1px 20px rgba(0,0,0,.4);
+
+    @media only screen and (max-width:850px){
+        width: 60%;
+    }
+    
+    .toggle{
+        transform: translateX(0);
+    }
+    form label{
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    form input{
+        padding: 5px 10px;
+        outline: none;
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+    }
+    form button{
+        padding: 10px 20px;
+        letter-spacing: 4px;
+        background-color: $blue;
+        color: #161032;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        width:100%;
+    }
+    #stop{
+        display: none;
+        background: $yellow;
+        color: #161032;
+
+    }
+}
